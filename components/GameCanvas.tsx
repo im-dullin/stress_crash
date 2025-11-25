@@ -548,7 +548,7 @@ export default function GameCanvas({
       drawRifleEffect(ctx, x, y, size);
     } else if (weapon === 'knife') {
       drawKnifeEffect(ctx, x, y, size, seed);
-    } else if (weapon === 'hammer' || weapon === 'bat') {
+    } else if (weapon === 'hammer') {
       drawHammerEffect(ctx, x, y, size, seed);
     } else if (weapon === 'bug') {
       drawBugEffect(ctx, x, y, size, seed);

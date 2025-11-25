@@ -114,12 +114,12 @@ export default function Weapon3DCursor({
             if (mesh.material) {
               if (Array.isArray(mesh.material)) {
                 mesh.material.forEach((mat) => {
-                  if (mat instanceof THREE.MeshStandardMaterial || mat instanceof THREE.MeshPhongMaterial) {
+                  if (mat instanceof THREE.MeshStandardMaterial) {
                     mat.metalness = 0.3;
                     mat.roughness = 0.7;
                   }
                 });
-              } else if (mesh.material instanceof THREE.MeshStandardMaterial || mesh.material instanceof THREE.MeshPhongMaterial) {
+              } else if (mesh.material instanceof THREE.MeshStandardMaterial) {
                 mesh.material.metalness = 0.3;
                 mesh.material.roughness = 0.7;
               }

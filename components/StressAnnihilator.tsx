@@ -6,7 +6,7 @@ import Header from './Header';
 import UploadSection from './UploadSection';
 import WeaponSelector from './WeaponSelector';
 
-export type WeaponType = 'gun1' | 'gun2' | 'gun3' | 'knife' | 'bat' | 'hammer' | 'bug';
+export type WeaponType = 'gun1' | 'gun2' | 'gun3' | 'knife' | 'hammer' | 'bug';
 
 export interface Weapon {
   name: string;

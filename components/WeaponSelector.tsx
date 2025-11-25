@@ -12,7 +12,6 @@ const weaponIcons: Record<WeaponType, string> = {
   gun2: '💥',
   gun3: '🎯',
   knife: '🗡️',
-  bat: '🏏',
   hammer: '🔨',
   bug: '🐛',
 };
