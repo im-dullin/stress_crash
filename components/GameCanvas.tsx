@@ -881,29 +881,10 @@ export default function GameCanvas({
         break;
     }
 
-    // 라이플은 5발 연속 발사
-    if (currentWeapon === 'gun3') {
-      const newCracks: Crack[] = [];
-      const baseSeed = Date.now();
-      for (let i = 0; i < 5; i++) {
-        // 수직 라인으로 5발 발사 (고정된 패턴)
-        const offsetX = ((baseSeed + i * 1000) % 30) - 15;
-        const offsetY = (i - 2) * 25 + ((baseSeed + i * 2000) % 10) - 5;
-        newCracks.push({
-          x: x + offsetX,
-          y: y + offsetY,
-          size: size * 0.7,
-          weapon: currentWeapon,
-          seed: baseSeed + i
-        });
-      }
-      setCracks((prev) => [...prev, ...newCracks]);
-      setHitCount((prev) => prev + 5);
-    } else {
-      const newCrack = { x, y, size, weapon: currentWeapon, seed: Date.now() };
-      setCracks((prev) => [...prev, newCrack]);
-      setHitCount((prev) => prev + 1);
-    }
+    // 파괴 흔적 생성
+    const newCrack = { x, y, size, weapon: currentWeapon, seed: Date.now() };
+    setCracks((prev) => [...prev, newCrack]);
+    setHitCount((prev) => prev + 1);
 
     // Play sound
     const weaponSounds = sounds[currentWeapon];
